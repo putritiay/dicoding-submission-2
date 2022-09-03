@@ -1,0 +1,394 @@
+/* Import Font Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(bg.png);
+  font-family: 'Poppins', sans-serif;
+}
+
+input,
+button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-transform: capitalize;
+  border: 2px solid whitesmoke;
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  background-color: lightseagreen;
+  color: white;
+}
+
+.header-logo {
+  font-size: 3.2rem;
+}
+
+.contents {
+  display: grid;
+  grid-template-areas:
+    'library searchbox'
+    'library input'
+    'bookshelf bookshelf';
+  grid-template-columns: 0.73fr 1fr;
+  grid-template-rows: 130px 410px 1fr;
+  gap: 15px;
+}
+
+.library {
+  grid-area: library;
+  border: 2px solid lightseagreen;
+  border-radius: 10px;
+  padding: 16px 24px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+}
+
+.library button {
+  background-color: white;
+  color: lightseagreen;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  padding: 8px 15px;
+  margin: 16px auto;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.library button:hover {
+  font-weight: bold;
+}
+
+.library-item {
+  border-radius: 16px;
+  margin-top: 16px;
+  padding: 16px 24px 16px 24px;
+  color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(32, 178, 170, 1), rgba(32, 178, 170, 0.3));
+}
+
+.library h2 {
+  color: lightseagreen;
+  text-align: center;
+  padding-bottom: 6px;
+}
+
+.book-cover {
+  width: 60px;
+  height: 80px;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+}
+
+.book-inform {
+  font-size: 14px;
+  padding-left: 14px;
+  color: #f7f7f7;
+}
+
+.search-section {
+  grid-area: searchbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid lightseagreen;
+  border-radius: 10px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+}
+
+.search-section h2 {
+  color: lightseagreen;
+}
+
+.search-section form {
+  padding: 16px 24px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 50px;
+  grid-gap: 16px;
+}
+
+.search-section form label {
+  display: flex;
+  align-items: center;
+  color: lightseagreen;
+  font-weight: bold;
+}
+
+.search-section form input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search-section form button {
+  background-color: lightseagreen;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-section form button:hover {
+  background-color: darkcyan;
+}
+
+.input-section {
+  grid-area: input;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 35px;
+  border: 2px solid lightseagreen;
+  border-radius: 10px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+}
+
+.input-section > h2 {
+  text-align: center;
+  color: lightseagreen;
+  padding-bottom: 5px;
+}
+
+.input-section > form > .input {
+  margin: 8px 0;
+}
+
+.input-section > form > button {
+  background-color: lightseagreen;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input-section > form > button:hover {
+  background-color: darkcyan;
+}
+
+.input-section > form > button > span {
+  font-weight: bold;
+}
+
+.input-section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input-section > form > .input > label {
+  color: lightseagreen;
+  font-weight: bold;
+}
+
+.input-section > form > .checklist {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input-section > form > .checklist > label {
+  color: lightseagreen;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.bookshelf-container {
+  grid-area: bookshelf;
+  display: grid;
+  grid-template-areas:
+    'yours yours'
+    'bookmark complete';
+  grid-template-columns: 1fr 0.92fr;
+  gap: 15px;
+  padding: 15px;
+  border: 2px solid lightseagreen;
+  border-radius: 10px;
+}
+
+.your-bookshelf {
+  grid-area: yours;
+  color: #f7f7f7;
+  background-color: lightseagreen;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.bookshelf {
+  grid-area: bookmark;
+  border: 2px solid lightseagreen;
+  padding: 16px;
+  border-radius: 10px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+}
+
+.bookshelf > h2 {
+  color: lightseagreen;
+  text-align: center;
+}
+
+.bookshelf > .book-list {
+  padding: 16px;
+}
+
+.book-item {
+  border-radius: 16px;
+  margin-top: 16px;
+  padding: 12px 24px 16px 24px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.book-item .book-info {
+  color: lightseagreen;
+  padding: 0 8px;
+  text-transform: capitalize;
+}
+
+.book-item .book-info h2 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.book-item .book-info p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.action {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.edit-data {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  border: none;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.edit-data > form {
+  margin: auto;
+  padding: 35px;
+  width: 30%;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 15px gainsboro;
+}
+
+.edit-data > form > h2 {
+  text-align: center;
+  padding-bottom: 10px;
+  color: lightseagreen;
+}
+
+.edit-data > form > button {
+  margin: 5px auto;
+}
+
+.edit-data > form > button:hover {
+  font-weight: bold;
+}
+
+.button1 {
+  background-color: lightseagreen;
+  color: #f7f7f7;
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 2px 6px;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+  justify-self: right;
+}
+
+.button1:hover {
+  background-color: darkcyan;
+}
+
+.button2 {
+  background-color: lightseagreen;
+  color: #f7f7f7;
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 2px 6px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.button2:hover {
+  background-color: darkcyan;
+}
+
+.bookmark {
+  grid-area: bookmark;
+}
+
+.complete {
+  grid-area: complete;
+}
+
+.space {
+  padding-right: 10px;
+}
+
+.placeholder::-webkit-input-placeholder {
+  color: lightgrey;
+}
+
+.placeholder:focus {
+  outline-color: lightseagreen;
+}
+
+.footer {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightseagreen;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.footer > span {
+  color: lightblue;
+}

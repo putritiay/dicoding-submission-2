@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>yourBookshelf.</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-logo"><i class="fa-solid fa-book-open-reader space"></i>yourBookshelf.</h1>
+    </header>
+    <main>
+      <div class="contents">
+        <section class="library">
+          <h2>Library</h2>
+          <div class="library-container">
+            <div class="library-item">
+              <div class="book-cover">
+                <img src="assets/cinderella.jpg" alt="" />
+              </div>
+              <div class="book-inform">
+                <h3>Cinderella</h3>
+                <p>Camila Cabello</p>
+                <p>Author : Kay Cannon</p>
+                <p>Year : 2021</p>
+              </div>
+            </div>
+            <div class="library-item">
+              <div class="book-cover">
+                <img src="assets/detective-conan.jpg" alt="" />
+              </div>
+              <div class="book-inform">
+                <h3>Detective Conan</h3>
+                <p>Black Organization 2</p>
+                <p>Author : G. Aoyama</p>
+                <p>Year : 2007</p>
+              </div>
+            </div>
+            <div class="library-item">
+              <div class="book-cover">
+                <img src="assets/harry-potter.jpg" alt="" />
+              </div>
+              <div class="book-inform">
+                <h3>Harry Potter</h3>
+                <p>Prizoner of Azkaban</p>
+                <p>Author : J.K Rowling</p>
+                <p>Year : 1997</p>
+              </div>
+            </div>
+
+            <button>Load More..</button>
+          </div>
+        </section>
+
+        <section class="input-section">
+          <h2>Add New Book</h2>
+          <form id="inputBook">
+            <div class="input">
+              <label for="inputBookTitle"> Title</label>
+              <input id="inputBookTitle" class="placeholder" type="text" placeholder="Book Title" required />
+            </div>
+            <div class="input">
+              <label for="inputBookAuthor"> Author</label>
+              <input id="inputBookAuthor" class="placeholder" type="text" placeholder="Book Author" required />
+            </div>
+            <div class="input">
+              <label for="inputBookYear"> Year</label>
+              <input id="inputBookYear" class="placeholder" type="number" placeholder="Book Year" min="1990" required />
+            </div>
+            <div class="checklist">
+              <label for="inputBookIsComplete"> Already Completed Read ? </label>
+              <input id="inputBookIsComplete" type="checkbox" />
+            </div>
+            <button id="bookSubmit" type="submit">Add to <span>Bookmark</span></button>
+          </form>
+        </section>
+
+        <section class="bookshelf-container">
+          <div class="your-bookshelf">
+            <h2>yourBook On yourBookshelf</h2>
+          </div>
+
+          <div class="bookshelf bookmark">
+            <h2><i class="fa-solid fa-bookmark space"></i>Bookmark</h2>
+
+            <div id="bookmarkBookshelfList" class="book-list">
+              <!--  
+                    <div class="book-list">
+                      <div class="book-item">
+                        <div class="book-info">
+                          <h2>Cinderella</h2>
+                          <p>Penulis : Kay Cannon</p>
+                          <p>Tahun Terbit : 2021</p>
+                        </div>
+                        <div class="action">
+                          <button class="button1"><i class="fa-solid fa-check"></i></button>
+                          <button class="button2"><i class="fa-solid fa-pen-to-square"></i></button>
+                          <button class="button2"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                      </div>
+                    </div> 
+                  -->
+            </div>
+          </div>
+
+          <div class="bookshelf complete">
+            <h2><i class="fa-solid fa-check-to-slot space"></i>Completed</h2>
+
+            <div id="completeBookshelfList" class="book-list">
+              <!--  
+                    <div class="book-list">
+                      <div class="book-item">
+                        <div class="book-info">
+                          <h2>Detective Conan</h2>
+                          <p>Penulis : G. Aoyama</p>
+                          <p>Tahun Terbit : 2007</p>
+                        </div>
+                        <div class="action">
+                          <button class="button1"><i class="fa-solid fa-check"></i></button>
+                          <button class="button2"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                      </div>
+                    </div> 
+                  -->
+            </div>
+          </div>
+        </section>
+
+        <section class="search-section">
+          <h2>Search Book</h2>
+          <form id="searchBook">
+            <label for="searchBookTitle">Title</label>
+            <input id="searchBookTitle" class="placeholder" type="text" placeholder="Search Book Title" />
+            <button id="searchSubmit" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </section>
+
+        <section class="input-section edit-data">
+          <form id="editBookData">
+            <h2>Edit Your Book</h2>
+            <div class="input">
+              <label for="inputEditBookTitle"> Title</label>
+              <input id="inputEditBookTitle" class="placeholder" type="text" placeholder="Edit Book Title" required />
+            </div>
+            <div class="input">
+              <label for="inputEditBookAuthor"> Author</label>
+              <input id="inputEditBookAuthor" class="placeholder" type="text" placeholder="Edit Book Author" required />
+            </div>
+            <div class="input">
+              <label for="inputEditBookYear"> Year</label>
+              <input id="inputEditBookYear" class="placeholder" type="number" placeholder="Edit Book Year" min="1990" required />
+            </div>
+
+            <button id="editDataCancel">Cancel</button>
+            <button id="editDataSubmit" type="submit">Save</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <h6>Designed By <span>PutriDev.</span> | Copyright <i class="uil uil-copyright"></i> 2022 All Rights Reserved</h6>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
